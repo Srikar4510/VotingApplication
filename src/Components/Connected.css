@@ -1,0 +1,114 @@
+.connected-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./bg.jpg'); /* Replace 'your-background-image.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+.connected-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./bg.jpg'); /* Same background image as the main container */
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Adjust the blur amount as needed */
+    z-index: -1;
+}
+
+.connected-header,
+.connected-account,
+.login-button,
+.candidates-table {
+    color: #fff; /* Text color */
+}
+
+.connected-header {
+    font-size: 28px; /* Increased font size */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow for better readability */
+}
+
+.connected-account {
+    font-size: 18px; /* Increased font size */
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Added text shadow */
+}
+.candidates-table {
+    width: 50%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft box shadow for a lifted effect */
+}
+
+.candidates-table th, .candidates-table td {
+    padding: 16px; /* Increased padding for better spacing */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent white border */
+    text-align: left;
+    font-size: 16px;
+    color: #fff; /* Text color */
+}
+
+.candidates-table th {
+    background-color: #3498db; /* Header background color */
+    color: #fff; /* Header text color */
+    font-weight: bold;
+}
+
+.candidates-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background on hover */
+}
+
+.candidates-table th, .candidates-table td {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Added text shadow */
+}
+
+/* Add this CSS to style the input field and button in the Connected component */
+.input-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="number"] {
+    padding: 12px;
+    font-size: 16px;
+    width: 200px; /* Adjust the width as needed */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Style the placeholder text for better visibility */
+input[type="number"]::placeholder {
+    color: #777;
+}
+
+/* Optional: Add some styles when the input field is focused */
+input[type="number"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+
